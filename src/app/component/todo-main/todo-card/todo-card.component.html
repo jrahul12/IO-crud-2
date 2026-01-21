@@ -1,0 +1,12 @@
+<ul class="list-group">
+    <li *ngFor="let todos of todo" class=" d-flex justify-content-between align-item-center list-group-item">
+        {{todos.title}}
+        <div>
+            <button mat-mini-fab color="primary" class="mr-3" (click)="onEdit(todos)">
+                <mat-icon>edit</mat-icon>
+            </button><button mat-mini-fab color="warn" (click)="onRemove(todos.id)">
+                <mat-icon>delete</mat-icon>
+            </button>
+        </div>
+    </li>
+</ul>

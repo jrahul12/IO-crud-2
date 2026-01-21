@@ -1,0 +1,27 @@
+<div class="card">
+    <div class="card-body">
+        <form #movieForm="ngForm" (ngSubmit)="onAdd()">
+            <div class="form-group">
+                <label for="title">title</label>
+                <input type="text" ngModel name="title" required #title="ngModel" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="rating">rating</label>
+                <input type="text" ngModel name="rating" required #rating="ngModel" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="image">image</label>
+                <input type="text" ngModel name="image" required #image="ngModel" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="description">description</label>
+                <input type="text" ngModel name="description" required #description="ngModel" class="form-control">
+            </div>
+            <div class="form-group">
+                <button *ngIf="!isInEditMode" class="btn btn-sm btn-block btn-info">Add Movie</button>
+                <button *ngIf="isInEditMode" class="btn btn-sm btn-block btn-success" (click)="onUpdate()">Update
+                    Movie</button>
+            </div>
+        </form>
+    </div>
+</div>

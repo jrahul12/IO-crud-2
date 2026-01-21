@@ -1,0 +1,19 @@
+<div class="card mb-3">
+    <div class="card-header">
+        <h3 class="m-0">
+            {{post.title}}
+        </h3>
+    </div>
+    <div class="card-body">
+        <p>
+            {{post.content}}
+        </p>
+    </div>
+    <div class="card-footer d-flex justify-content-between">
+        <button mat-mini-fab color="primary" class="mr-3" (click)="onEdit(post)">
+            <mat-icon>edit</mat-icon>
+        </button><button mat-mini-fab color="warn" (click)="onRemove(post.id)">
+            <mat-icon>delete</mat-icon>
+        </button>
+    </div>
+</div>

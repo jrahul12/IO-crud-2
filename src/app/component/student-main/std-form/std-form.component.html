@@ -1,0 +1,27 @@
+<div class="card">
+    <div class="card-body">
+        <form #stdForm="ngForm" (ngSubmit)="onAdd()">
+            <div class="form-group">
+                <label for="name">name</label>
+                <input type="text" ngModel required name="name" #name="ngModel" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="age">age</label>
+                <input type="text" ngModel required name="age" #age="ngModel" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="course">course</label>
+                <input type="text" ngModel required name="course" #course="ngModel" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="grade">grade</label>
+                <input type="text" ngModel required name="grade" #grade="ngModel" class="form-control">
+            </div>
+            <div class="form-group">
+                <button *ngIf="!isInEditMode" color="primary" mat-raised-button class="btn btn-sm btn-block">Add Student</button>
+                <button *ngIf="isInEditMode" class="btn btn-sm btn-block btn-success" (click)="onUpdate()">Update
+                    Student</button>
+            </div>
+        </form>
+    </div>
+</div>
